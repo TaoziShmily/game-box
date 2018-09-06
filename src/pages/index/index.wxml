@@ -1,0 +1,57 @@
+<view class="homepage">
+	<!-- 顶部幻灯片列表 -->
+	<view class="swiper-box">
+		<view wx:if="{{imgUrls.length > 1}}">
+			<swiper indicator-dots="{{indicatorDots}}"
+			  autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-color="rgba(255, 255, 255, .3)" indicator-active-color="{{indicatorActiveColor}}">
+			  <view wx:for="{{imgUrls}}" wx:key="item" data-jump_url="{{item.jump_url}}" bindtap="goWebViewPage">
+			    <swiper-item>
+			      <image src="{{item.logo}}" class="slide-image" width="355" height="150"/>
+			    </swiper-item>
+			  </view>
+			</swiper>
+		</view>
+		<view wx:else>
+			<view wx:for="{{imgUrls}}" wx:key="item" data-jump_url="{{item.jump_url}}" bindtap="goWebViewPage">
+				<image src="{{item.logo}}" class="slide-image" width="355" height="150"/>
+			</view>
+		</view>
+
+	</view>
+	<!-- 最新上线列表 -->
+	<view class="newest-box">
+		<view class="title box box-align-center">
+			<view class="left"></view>
+			<view class="color-orange fz-14" style="width:200rpx;text-align:center;">新游上线</view>
+			<view class="right"></view>
+		</view>
+		<scroll-view scroll-x="true" class="scroll-view" style="white-space: nowrap; display:flex ">
+		    <view class="scroll-view_item box box-tb box-align-center box-pack-center" wx:for="{{newestList}}" wx:key="item" data-jump_url="{{item.jump_url}}" bindtap="goWebViewPage">
+		    	<image src="{{item.logo}}" class="image" style="background:green;border-radius:20rpx;"/>
+		    	<view class="name fz-12 border">{{item.name}}</view>
+		    </view>
+		</scroll-view>
+	</view>
+	<!-- 列表 -->
+	<view class="list box box-pack-between box-align-center border_top fz-12" wx:for="{{list}}" wx:key="item" data-jump_url="{{item.jump_url}}" bindtap="goWebViewPage">
+		<view class="box">
+			<image src="{{item.logo}}" class="image" style="background:green;border-radius:20rpx;"/>
+			<view class="box box-tb box-pack-between">
+				<view class="box">
+					<view class="title font-weight fz-16 color-black">
+						{{item.name}}
+						<view class="count fz-12 color-gray font-normal"><text class="color-orange">{{item.apply_num}}</text>人在玩</view>
+					</view>
+					
+				</view>
+				<view class="desc color-gray">{{item.desc}}</view>
+			</view>
+		</view>
+		<button type="default" class="color-white" size="mini">开始</button>
+	</view>
+</view>
+
+
+
+
+

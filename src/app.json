@@ -1,0 +1,12 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/webView/webView"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#f97c08",
+    "navigationBarTitleText": "游戏盒子",
+    "navigationBarTextStyle":"white"
+  }
+}

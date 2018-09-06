@@ -1,0 +1,72 @@
+.swiper-box,swiper,swiper-item,.slide-image{
+	width: 750rpx;
+	height: 300rpx;
+}
+.newest-box{
+	margin-bottom: 20rpx;
+	.title{
+		height: 100rpx;
+		.left,.right{
+			width: 430rpx;
+			height: 2rpx;
+			background-color: #eadee0;
+		}
+	}
+	.scroll-view_item{
+		width: 135rpx;
+		margin: 0 0 0 44rpx;
+		display:inline-block;
+		image{
+			width: 119rpx;
+			height: 116rpx;
+			margin-left: 8rpx;
+		}
+		.name{
+			width: 134rpx;
+			padding:5rpx;
+			box-sizing: border;
+			border-radius: 20rpx;
+			margin-top: 10rpx;
+			text-align: center;
+			white-space:nowrap; 
+			overflow:hidden;
+			-ms-text-overflow: ellipsis;
+			text-overflow: ellipsis;
+
+		}
+		&:last-of-type{
+			margin:0 36rpx 0 44rpx;
+		}
+	}	
+}
+
+.list{
+	padding: 24rpx 28rpx;
+	image{
+		width: 110rpx;
+		height: 110rpx;
+		margin-right: 20rpx;
+	}
+	.title,.desc{
+		width:420rpx;
+		white-space:nowrap; 
+		overflow:hidden;
+		-ms-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+		position: relative;
+		.count{
+			position: absolute;
+			top: 5rpx;
+			right: 0;
+		}
+	}
+}
+button[type=default] {
+	color:#fff;
+	background-color:#ff7900;
+}
+.button-hover[type=default] {
+	color:rgba(255, 255, 255, 0.6);
+	background-color:#e77004;
+}
+

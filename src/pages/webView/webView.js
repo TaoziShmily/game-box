@@ -1,0 +1,11 @@
+Page({
+	data:{
+		jump_url:''
+	},
+	onLoad(options){
+		console.log('options',options);
+		this.setData({
+			jump_url:options.jump_url
+		})
+	}
+})
