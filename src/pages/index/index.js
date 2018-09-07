@@ -51,6 +51,15 @@ Page({
           url: '/pages/webView/webView?jump_url='+jump_url
         })
     },
+
+    // 点击量
+    postClickLog(e) {
+        var jump_url = e.currentTarget.dataset.jump_url;
+        wx.request({
+          url: jump_url,
+        }) 
+    },
+
     // 页面加载
     onLoad: function () {
         if (wx.showToast) {
